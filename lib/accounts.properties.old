@@ -1,0 +1,280 @@
+#This is a template for the account.properties file. The account.properties
+# file contains a list of protocol account initialization properties, such as
+# SIP server addresses and usernames, ICQ uin-s and passwords, AIM screennames
+# and etc. The account.properties file MUST NOT be committed to CVS or shared
+# among developers since that could lead to multiple login problems and cause
+# testing to fail. You could create the file yourself using this template and
+# setting all fields as indicated.
+#
+# @author Emil Ivov
+
+
+# An ICQ UIN (number) for the ICQ implementation that is going to be tested.
+# !!!EXTREMELY IMPORTANT!!! The contact list of this account will be COMPLETELY
+# and IRREVERSIBLY ERASED
+#accounts.icq.TESTED_IMPL_ACCOUNT_ID=258191419
+accounts.icq.TESTED_IMPL_ACCOUNT_ID=220783647
+
+# The Password for the UIN specifined in accounts.icq.TESTED_IMPL_ACCOUNT_ID.
+#accounts.icq.TESTED_IMPL_PWD=6pC0mmtt
+accounts.icq.TESTED_IMPL_PWD=damencho
+
+# An ICQ UIN (number) for the ICQ SLICK itself, so that it would be able to
+# sign on icq and also communicated with the tested implementation.
+#accounts.icq.TESTING_IMPL_ACCOUNT_ID=339846637
+accounts.icq.TESTING_IMPL_ACCOUNT_ID=231624490
+
+# The Password for the UIN specifined in accounts.icq.TESTING_IMPL_ACCOUNT_ID.
+#accounts.icq.TESTING_IMPL_PWD=6pC0mmtt
+accounts.icq.TESTING_IMPL_PWD=damencho
+
+# The account and password for a third account used in chat room testing
+accounts.icq.TESTING_IMPL2_ACCOUNT_ID=589873929
+accounts.icq.TESTING_IMPL2_PWD=sipcomm3
+
+# The following describes the contact list that we will store on the AIM server
+# for the tested account implementation. The value of the CONTACT_LIST property
+# must be a space separated string containing elements each of which is in the
+# format: GroupName.UIN
+#
+#
+# VERY IMPORTANT!!! All other users in this contact list will be removed and
+# the contacts and contact groups enumerated beneath will be added instead
+# group2.48216781 \
+# group3.38687470
+
+accounts.icq.CONTACT_LIST=\
+ group1.321947947 \
+ group3.219630674
+
+
+accounts.reporting.ICQ_REPORT_LIST=38687470 85450845 51226782 48216781 19312124
+
+# if for some reasone you want not to run online icq tests (e.g. because they
+# take an awful lot to complete). set this property to true (optional)
+accounts.icq.DISABLE_ONLINE_TESTING=true
+
+#
+# SIP PROPERTIES
+#
+
+# ACCOUNT 1
+
+#Indicates whether the servers that the sip accounts belong to, preserve caller
+#and callee info such as addresses or display names. some servers override these
+#(e.g. for NAT supprt) and the tests should not assert it in such cases
+accounts.sip.PRESERVE_PARTICIPANT_INFO=false
+
+# The user id needed to log onto the server specified in the SERVER_ADDRESS
+# property.
+#accounts.sip.account1.USER_ID=sipcommunicator1@ippi.fr
+#accounts.sip.account1.USER_ID=sipcommunicator3@proxenet.u-strasbg.fr
+#accounts.sip.account1.USER_ID=jitsi1@swing.jitsi.org
+accounts.sip.account1.USER_ID=jitsi1@jit.si
+
+# The display name to associate with account1
+accounts.sip.account1.DISPLAY_NAME=SIP Communicatorov
+
+# The password (in plain text) needed to log the user specified in USER_ID
+# on the server specified in SERVER_ADDRESS.
+#accounts.sip.account1.PASSWORD=6pC0mm
+accounts.sip.account1.PASSWORD=tupalupa
+
+# The address of the server that this account belongs to (Use '[', ']' for IPv6)
+#accounts.sip.account1.SERVER_ADDRESS=ippi.fr
+#accounts.sip.account1.SERVER_ADDRESS=proxenet.u-strasbg.fr
+#accounts.sip.account1.SERVER_ADDRESS=swing.jitsi.org
+accounts.sip.account1.SERVER_ADDRESS=jit.si
+
+# A port numer to use when connecting to the proxy specified in SERVER_ADDRESS
+# (Optional)
+#accounts.sip.account1.SERVER_PORT=5060
+
+# The address of the SIP Proxy to use with this account(Use '[', ']' for IPv6)
+# (Optional)
+#accounts.sip.account1.PROXY_ADDRESS=ippi.fr
+#accounts.sip.account1.PROXY_ADDRESS=proxenet.u-strasbg.fr
+#accounts.sip.account1.PROXY_ADDRESS=swing.jitsi.org
+
+
+# A port numer to use when connecting to the proxy specified in PROXY_ADDRESS
+# (Optional)
+#accounts.sip.account1.PROXY_PORT=5060
+
+
+# ACCOUNT 2
+# The user id needed to log onto the server specified in the SERVER_ADDRESS
+# property.
+#accounts.sip.account2.USER_ID=sipcommunicator2@ippi.fr
+#accounts.sip.account2.USER_ID=sipcommunicator4@proxenet.u-strasbg.fr
+#accounts.sip.account2.USER_ID=jitsi2@swing.jitsi.org
+accounts.sip.account2.USER_ID=jitsi2@jit.si
+
+# The display name to associate with account1
+accounts.sip.account2.DISPLAY_NAME=Emil Ivov
+
+# The password (in plain text) needed to log the user specified in USER_ID
+# on the server specified in SERVER_ADDRESS.
+#accounts.sip.account2.PASSWORD=6pC0mm
+accounts.sip.account2.PASSWORD=tupalupa
+
+# The address of the server that this account belongs to (Use '[', ']' for IPv6)
+#accounts.sip.account2.SERVER_ADDRESS=ippi.fr
+#accounts.sip.account2.SERVER_ADDRESS=proxenet.u-strasbg.fr
+#accounts.sip.account2.SERVER_ADDRESS=swing.jitsi.org
+accounts.sip.account2.SERVER_ADDRESS=jit.si
+
+# A port numer to use when connecting to the proxy specified in SERVER_ADDRESS
+# (Optional)
+#accounts.sip.account2.SERVER_PORT=5060
+
+# The address of the SIP Proxy to use with this account(Use '[', ']' for IPv6)
+# (Optional)
+#accounts.sip.account2.PROXY_ADDRESS=ippi.fr
+#accounts.sip.account2.PROXY_ADDRESS=proxenet.u-strasbg.fr
+#accounts.sip.account2.PROXY_ADDRESS=swing.jitsi.org
+
+# A port numer to use when connecting to the proxy specified in PROXY_ADDRESS
+# (Optional)
+#accounts.sip.account2.PROXY_PORT=5060
+
+# This will be the contact list which we will use to test persistent storing
+# of sip protocol
+#accounts.sip.CONTACT_LIST=test-group.sipcommunicator1@ippi.fr
+#accounts.sip.CONTACT_LIST=test-group.sipcommunicator3@proxenet.u-strasbg.fr
+#accounts.sip.CONTACT_LIST=test-group.jitsi1@swing.jitsi.org
+accounts.sip.CONTACT_LIST=test-group.jitsi1@jit.si
+
+# JABBER PROPERTIES
+
+# JABBER ACCOUNT 1
+# The user id needed to log onto the server specified in the SERVER_ADDRESS
+# property.
+#accounts.jabber.account1.USER_ID=sipcommunicator1@gmail.com
+#accounts.jabber.account1.USER_ID=sipcommunicator1@voipgw.u-strasbg.fr
+accounts.jabber.account1.USER_ID=jitsi1@jit.si
+
+# The password (in plain text) needed to log the user specified in USER_ID
+# on the server specified in SERVER_ADDRESS.
+#accounts.jabber.account1.PASSWORD=sipcommunicator
+accounts.jabber.account1.PASSWORD=j1ts11
+
+# The address of the server that this account belongs to (Use '[', ']' for IPv6)
+#accounts.jabber.account1.SERVER_ADDRESS=talk.google.com
+#accounts.jabber.account1.SERVER_ADDRESS=voipgw.u-strasbg.fr
+accounts.jabber.account1.SERVER_ADDRESS=jit.si
+
+# JABBER ACCOUNT 2
+
+# The user id needed to log onto the server specified in the SERVER_ADDRESS
+# property.
+#accounts.jabber.account2.USER_ID=sipcommunicator2@gmail.com
+#accounts.jabber.account2.USER_ID=sipcommunicator2@voipgw.u-strasbg.fr
+accounts.jabber.account2.USER_ID=jitsi2@jit.si
+
+# The password (in plain text) needed to log the user specified in USER_ID
+# on the server specified in SERVER_ADDRESS.
+#accounts.jabber.account2.PASSWORD=sipcommunicator
+accounts.jabber.account2.PASSWORD=j1ts12
+
+# The address of the server that this account belongs to (Use '[', ']' for IPv6)
+#accounts.jabber.account2.SERVER_ADDRESS=talk.google.com
+#accounts.jabber.account2.SERVER_ADDRESS=voipgw.u-strasbg.fr
+accounts.jabber.account2.SERVER_ADDRESS=jit.si
+
+
+# The third account that Valentin users for hists tests
+#accounts.jabber.account3.USER_ID=sipcommunicator3@voipgw.u-strasbg.fr
+#accounts.jabber.account3.PASSWORD=sipcommunicator
+#accounts.jabber.account3.SERVER_ADDRESS=voipgw.u-strasbg.fr
+#accounts.jabber.account3.SERVER_PORT=5222
+accounts.jabber.account3.USER_ID=jitsi3@jit.si
+accounts.jabber.account3.PASSWORD=j1ts13
+accounts.jabber.account3.SERVER_ADDRESS=jit.si
+
+# The following describes the contact list that we will store on the Jabber 
+# server for the tested account implementation. The value of the CONTACT_LIST 
+# property must be a space separated string containing elements each of which 
+# is in the format: GroupName.UIN
+#
+#
+# VERY IMPORTANT!!! All other users in this contact list will be removed and
+# the contacts and contact groups enumerated beneath will be added instead
+accounts.jabber.CONTACT_LIST=test-group.damenchodev1@gmail.com test-group.damenchodev2@gmail.com
+
+# list of icq accounts to notify during testing (optional)
+accounts.reporting.JABBER_REPORT_LIST=damencho@gmail.com emcho@sip-communicator.org
+
+
+# MSN PROPERTIES
+
+# MSN ACCOUNT 1
+# The user email needed to log onto the server
+accounts.msn.account1.USER_ID=sipcommunicator1@hotmail.com
+
+# The password (in plain text) needed to log the user specified in USER_ID
+# on the server
+accounts.msn.account1.PASSWORD=tupalupa
+
+# MSN ACCOUNT 2
+
+# The user email needed to log onto the server
+accounts.msn.account2.USER_ID=sipcommunicator2@hotmail.com
+
+# The password (in plain text) needed to log the user specified in USER_ID
+# on the server
+accounts.msn.account2.PASSWORD=tupalupa
+
+#the third account that valentin uses for chat room testing
+accounts.msn.account3.USER_ID=sc-test-acc3@hotmail.com
+accounts.msn.account3.PASSWORD=sip-comm-acc3
+
+# The following describes the contact list that we will store on the Msn
+# server for the tested account implementation. The value of the CONTACT_LIST
+# property must be a space separated string containing elements each of which
+# is in the format: GroupName.UIN
+#
+#
+# VERY IMPORTANT!!! All other users in this contact list will be removed and
+# the contacts and contact groups enumerated beneath will be added instead
+accounts.msn.CONTACT_LIST=test-group.damenchodev1@hotmail.com test-group.damenchodev2@hotmail.com
+
+# list of msn accounts to notify during testing (optional)
+accounts.reporting.MSN_REPORT_LIST=damencho@damencho.com emilivov@hotmail.com
+
+# Yahoo Props
+accounts.yahoo.account1.USER_ID=sipcommunicator1
+accounts.yahoo.account1.PASSWORD=tupalupa
+accounts.yahoo.account2.USER_ID=sipcommunicator2
+accounts.yahoo.account2.PASSWORD=tupalupa
+accounts.yahoo.account3.USER_ID=sc_test_acc3@yahoo.com
+accounts.yahoo.account3.PASSWORD=sip-comm-test3
+accounts.yahoo.CONTACT_LIST=test-group.damenchodev1 test-group.damenchodev2
+#accounts.yahoo.account1.USER_ID=damenchodev1
+#accounts.yahoo.account1.PASSWORD=123456
+#accounts.yahoo.account2.USER_ID=damenchodev2
+#accounts.yahoo.account2.PASSWORD=123456
+#accounts.yahoo.CONTACT_LIST=test-group.damencho
+#accounts.reporting.YAHOO_REPORT_LIST=damencho yana_stamcheva emil_ivov
+
+
+# GIBBERISH Account 1
+# The username to create the first Gibberish account with.
+accounts.gibberish.account1.USER_ID=gibacc1
+
+# A password (the gibberish provider should take any password) necessary to
+# created the Gibberish account.
+accounts.gibberish.account1.PASSWORD=whatever
+
+# GIBBERISH Account 2
+# The username to create the first Gibberish account with.
+accounts.gibberish.account2.USER_ID=gibacc2
+
+# A password (the gibberish provider should take any password) necessary to
+# created the Gibberish account.
+accounts.gibberish.account2.PASSWORD=whatever2
+
+# contact groups enumerated beneath will be added to the contact list of one
+# of the accounts for testing.
+accounts.gibberish.CONTACT_LIST=test-group.user1
+test-group2.user2
